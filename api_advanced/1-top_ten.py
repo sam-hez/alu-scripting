@@ -8,6 +8,7 @@ def top_ten(subreddit):
     """Print the titles of the first ten hot posts in a subreddit."""
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {
+        "Accept": "application/json",
         "User-Agent": "python:alu-scripting:v1.0 (by /u/sam-hez)"
     }
     params = {
@@ -20,6 +21,15 @@ def top_ten(subreddit):
         params=params,
         allow_redirects=False
     )
+
+    if response.status_code != 200:
+        url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
+        response = requests.get(
+            url,
+            headers=headers,
+            params=params,
+            allow_redirects=False
+        )
 
     if response.status_code != 200:
         print("None")
