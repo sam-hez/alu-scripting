@@ -6,18 +6,14 @@ import requests
 
 def top_ten(subreddit):
     """Print the titles of the first ten hot posts in a subreddit."""
-    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {
-        "User-Agent": "alu-api-advanced/1.0 by sam-hez"
-    }
-    params = {
-        "limit": 10
+        "User-Agent": "python:alu-scripting:v1.0 (by /u/sam-hez)"
     }
 
     response = requests.get(
         url,
         headers=headers,
-        params=params,
         allow_redirects=False
     )
 
