@@ -14,3 +14,9 @@ when the subreddit is invalid.
 `1-top_ten.py` provides the function `top_ten(subreddit)`. It prints the
 titles of the first ten hot posts for a valid subreddit and prints `None` when
 the subreddit is invalid.
+
+## Task 2: Recurse it!
+
+`2-recurse.py` provides the function `recurse(subreddit)`. It returns a list
+of all hot post titles for a valid subreddit and returns `None` when the
+subreddit is invalid.
