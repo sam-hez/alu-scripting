@@ -20,3 +20,9 @@ the subreddit is invalid.
 `2-recurse.py` provides the function `recurse(subreddit)`. It returns a list
 of all hot post titles for a valid subreddit and returns `None` when the
 subreddit is invalid.
+
+## Task 3: Count it!
+
+`3-count.py` provides the function `count_words(subreddit, word_list)`. It
+counts given keywords in hot post titles and prints the results sorted by count
+and then alphabetically.
